@@ -1,5 +1,8 @@
 const mongoose=require("mongoose");
-const mongoUrl="mongodb://127.0.0.1:27017/hulla";
+// const mongoUrl="mongodb://127.0.0.1:27017/hulla";
+
+const mongoUrl=process.env.DB_URL;
+
 mongoose.connect(mongoUrl,{
     useNewUrlParser:true,
     useUnifiedTopology:true
@@ -17,3 +20,4 @@ db.on("disconnected", () => {
 module.exports=db;
 
 //comment added for testing purpose
+//MfTqzEBe5xmk1CTq
